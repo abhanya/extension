@@ -1,0 +1,13 @@
+img[alt="pic2"]{
+    height: 300px;
+    width: 300px;
+}
+img[alt="pic3"]{
+    height: 500px;
+    width: 500px;
+}
+
+input[type="password"]{
+    color: green;
+    width: 40px;
+}

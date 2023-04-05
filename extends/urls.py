@@ -19,4 +19,6 @@ from django.urls import path,include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('extension.urls')),
+    path('',include('cake.urls')),
+    path('',include('test_js.urls')),
 ]

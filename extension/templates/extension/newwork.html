@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style>
+        .ul{
+            color: green;
+        }
+        .div1{
+            background-color: bisque;
+            height: 500px;
+            width: 500px;
+            padding: 20px;
+            border: 1px black solid;
+        }
+            
+        
+    </style>
+</head>
+<body>
+
+    <!-- <p id="p1" style="display: none;">Lorem ipsum dolor sit.</p> -->
+    <button id="btn">click</button>
+    <!-- <div id="div1" style="background-color: bisque; height:200px; width: 200px;position: absolute;"></div> -->
+    <ul>
+        <li>php</li>
+        <li>java</li>
+        <li>python</li>
+    </ul>
+<div class="div1"></div>
+    <script>
+        $(document).ready(function(){
+        //     var p = $('#p1').html()
+        //     console.log(p)
+            // document.getElementById('p1').innerHTML = "changetext"
+            // $('#p1').html('change text')
+            $('#btn').click(function(){
+                // $('#p1').hide()
+                // $('#p1').toggle()
+                // $('#div1').fadeOut(3000)
+                // $('#div1').fadeIn(3000)
+                // $('#div1').fadeTo(2000,0.5)
+                // $('#div1').toggle(3000)
+                // $('#div1').slideDown(3000)
+                // $('#div1').slideUp(3000)
+                // $('#div1').slideToggle(3000)
+                // $('#div1')
+                // .fadeOut(2000)
+                // .delay(5000)
+                // .fadeIn(2000)
+                // $('#div1').animate({
+                //     'height':'500px'
+                // }).css('background-color','blue')
+                // .animate({
+                //     'left':'500'
+                // })
+                // .animate({
+                //     'right':'500'
+                // })
+                // .
+
+            //     $('#div1').animate({
+            //         'top':'300'
+            //     })
+            //     .delay(2000)
+            //     .animate({
+            //         'left':'500'
+            //     })
+            //     .delay(2000)
+            //     .animate({
+            //         'top':'100px'
+            //     })
+            //     .delay(2000)
+            //     .animate({
+            //         'left':'0'
+            //     })
+                // $('#list').empty()
+                // $('#list').remove()
+                // $('ul').addClass('ul')
+                
+                var height = $('.div1').height() 
+                console.log('height' +height)
+
+                var width = $('.div1').width()
+                console.log('width'+width)
+
+                var innerwidth = $('.div1').innerWidth()
+                console.log('innw' +innerWidth)
+
+                var innerheight = $('.div1').innerHeight()
+                console.log('innh' +innerheight)
+
+                var outerwidth = $('.div1').outerWidth()
+                console.log('outw' +outerwidth)
+
+                var outerheight = $('.div1').outerHeight()
+                console.log('outh' +outerHeight)
+
+            })
+            
+        })
+            
+    </script>
+</body>
+</html>

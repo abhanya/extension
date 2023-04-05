@@ -1,0 +1,50 @@
+/* 
+.div1{
+    grid-area: one;
+}
+
+.div2{
+    grid-area: two;
+}
+
+.div3{
+    grid-area: three;
+}
+
+.div4{
+    grid-area: four;
+}
+
+.div5{
+    grid-area: five;
+}
+
+.div{
+    display: grid;
+    background-color: blue;
+    height: 100vh;
+    border: 2px black solid;
+    grid-template-areas: one two three four
+    one two three one four 
+    one two two one three;
+
+}
+
+.div div{
+    background-color: brown;
+    border: 2px white solid;
+}
+
+
+ */
+
+.div{
+display: grid;
+height: 100%;
+}
+
+
+
+
+
+

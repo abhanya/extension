@@ -1,0 +1,14 @@
+.dmain{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    border: 1px;
+    background-color: beige;
+}
+
+.dbody{
+    background-color: rgb(255, 238, 5);
+    grid-column: span 4;
+    height: 100px;
+    text-align: center; 
+}

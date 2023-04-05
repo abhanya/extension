@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <h1 id='hd1'>title</h1>
+        <p class='p2'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, at.</p>
+        <p class='p2' id='lorem' onmouseover="lorem()">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, illum.</p>
+        <button id="btn"onclick="changetext()">submit</button>
+        <script>
+        var h = document.getElementById('hd1')
+        console.log(h)
+        // p=document.getElementsByTagName('p2')
+        // console.log(p)
+        // p1=document.getElementsByClassName('p2')
+        // console.log(p1)
+        function changetext(){
+        h.innerHTML='hai'
+        h.align='center'
+        h.style.color='blue'
+        h.setAttribute('class','hai')
+        // h.remove()
+        newel = document.createElement("h1")
+        newel.innerHTML='hai hello'
+        document.body.appendChild(newel)
+        }
+        function lorem(){
+            document.getElementById('lorem').innerHTML="welcome"
+
+        }
+
+        // <!-- <input type="text" id="text1"><br>
+        // <input type="text" id='text2'><br>
+        // <button id="bt1">+</button>
+        // <button id="bt2">-</button>
+        // <button id="bt3">*</button>
+        // <button id="bt4">/</button> -->
+
+        // <!-- <h1>hii</h1>
+        // <p id="p1">Lorem ipsum dolor sit amet.</p> -->
+        
+        // <!-- <button id="buttn" onclick="btn()">click</button>
+        // <div id="div1">Lorem ipsum dolor sit amet.</div>
+
+        // <script>
+        //     function btn(){
+        //         document.getElementById('div1').innerHTML="change text"
+        //         document.getElementById('div1').style.color="red"
+        //         document.getElementById('buttn').innerHTML='clicked'
+        //     }
+            
+        </script>
+    
+</body>
+</html>

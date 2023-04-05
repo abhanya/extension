@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                name:
+            </td>
+            <td>
+                <input type="text" id="name">
+                <span id="name_err"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                age: 
+            </td>
+            <td>
+                <input type="text" id="age">
+                <span id="age_err"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                gender: 
+            </td>
+            <td>
+                male<input type="radio" name="gender" value="male" id="gmale">
+                female<input type="radio" name="gender" value="female" id="gfemale">
+                <span id="gen_err"></span> 
+            </td>
+        </tr>
+        <tr>
+            <td>
+                phone:            
+            </td>
+            <td>
+                <input type="text" id="phone">
+                <span id="ph_err"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                email:            
+            </td>
+            <td>
+                <input type="text" id="mail">
+                <span id="mail_err"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                username:
+            </td>
+            <td>
+                <input type="text" id="username">
+                <span id="user_err"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                password:
+            </td>
+            <td>
+                <input type="password" id="pass">
+                <span id="pass_err"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <input type="button" value="submit" id="submit" onclick="return validate()">
+            </td>
+        </tr>
+    </table>
+
+<script>
+    function validate(){
+
+    var first_name=document.getElementById('name')
+    var age_1=document.getElementById('age')
+    var phone_number=document.getElementById('phone')
+    var emailadd=document.getElementById('mail')
+    var username_1=document.getElementById('username')
+    var userpasswor=document.getElementById('pass')
+    var gen_m=document.getElementById('gmale')
+    var gen_f=document.getElementById('gfemale')
+
+    var fname_error=document.getElementById('name_err')
+    var age_error=document.getElementById('age_err')
+    var phn_error=document.getElementById('ph_err')
+    var mail_error=document.getElementById('mail_err')
+    var username_error=document.getElementById('user_err')
+    var password_error=document.getElementById('pass_err')
+    var gen_error=document.getElementById('gen_err')
+    var nameRegex = /^[a-zA-Z\-]+$/;
+
+
+    if(first_name.value==''){
+        fname_error.innerHTML='please enter name'
+        fname_error.style.color='red'
+        first_name.style.border='1px solid red'
+    }
+    else{
+        if(nameRegex.test(first_name.value)==false){
+            fname_error.innerHTML='name should not contain any charactors'
+            fname_error.style.color='red'
+        }
+    }
+
+    if(age_1.value==''){
+        age_error.innerHTML='please enter age'
+        age_error.style.color='red'
+        age_1.style.border='1px solid red'
+    }
+
+    if(phone_number.value==''){
+        phn_error.innerHTML='please enter phn number'
+        phn_error.style.color='red'
+        phone_number.style.border='1px solid red'
+    }
+
+    if(emailadd.value==''){
+        mail_error.innerHTML='please enter mail'
+        mail_error.style.color='red'
+        emailadd.style.border='1px solid red'
+    }
+
+    if(username_1.value==''){
+        username_error.innerHTML='please enter username'
+        username_error.style.color='red'
+        username_1.style.border='1px solid red'
+    }
+
+    if(userpasswor.value==''){
+        password_error.innerHTML='please enter password'
+        password_error.style.color='red'
+        userpasswor.style.border='1px solid red'
+    }
+
+    if(gen_m.checked==false && gen_f.checked==false){
+        gen_error.innerHTML='please select any gender'
+        gen_error.style.color='red'
+    }
+
+    if(userpasswor.value.length<8){
+        password_error.innerHTML='password must be atleast 8 charactors'
+    }
+    }
+
+    
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

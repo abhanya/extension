@@ -1,0 +1,19 @@
+div{
+    
+    width: 100px;
+    /* border-left-width:2px ;
+    border-right-width: 2px;
+    border-top-width: 2px;
+    border-bottom-width: 2px; */
+
+    /* border-width:2px 3px 4px 5px;
+    border-style: dotted double groove dashed;
+    border-color: black; */
+    border: 5px groove greenyellow;
+    /* margin: auto; */
+    
+    margin-top: 40px;
+    min-height: 10px;
+    max-height: 200px;
+    overflow: scroll;
+}

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body>
+
+    
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Task</label>
+          <input type="text" class="form-control w-50" id="task" placeholder="enter task">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">discription</label>
+          <textarea class="form-control w-50" id="discription" rows="3"></textarea>
+        </div>
+        <span id="alert"></span><br><br>
+        <button type="submit" class="btn btn-primary" onclick="add()" id="buttn">Add</button><br><br>
+      
+        
+    <table id="todo_tb" class="table table-striped w-50">
+        <tr>
+            <th>s/no.</th>
+            <th>Task</th>
+            <th>discription</th>
+            <th>date</th>
+            <th>status</th>
+            <th>action</th>
+        </tr>
+    </table>
+
+    <script>
+        var s_no = 01
+        var row_no = 0       
+        function add(){
+
+            var task = document.getElementById('task')
+            var discription= document.getElementById('discription')
+            var alert_s=document.getElementById('alert')
+            if(task.value == '' || discription.value == ''){
+
+                alert_s.innerHTML='please fill'
+                alert_s.style.color='red'
+            }
+            else{
+
+                var dt = new Date() // current date nd tym
+            var current_date = dt.getDate() + '/' + dt.getMonth() + '/' + dt.getFullYear()
+
+            var todo_tb= document.getElementById('todo_tb')
+            var new_tr=document.createElement('tr') // creating new row
+            row_no++
+            var row_id= 'row'+row_no // eg: row0,row1,row2...
+            new_tr.setAttribute('id',row_id) // setting id attribute to new tr
+
+            // creating new table cells inside for newly created tr
+
+            var td_no=new_tr.appendChild(document.createElement('td')) 
+            var td_tsk=new_tr.appendChild(document.createElement('td'))
+            var td_dis=new_tr.appendChild(document.createElement('td'))
+            var td_date=new_tr.appendChild(document.createElement('td'))
+            var td_sts=new_tr.appendChild(document.createElement('td'))
+            var td_action=new_tr.appendChild(document.createElement('td'))
+
+            
+            td_no.innerHTML = s_no++ // increment snum, then append to 1st td
+            todo_tb.appendChild(new_tr)
+
+            td_tsk.innerHTML = task.value
+            td_dis.innerHTML = discription.value
+            td_date.innerHTML = current_date
+            td_sts.innerHTML = 'pending'
+            td_sts.style.color="red"
+            td_action.innerHTML='<button class="btn btn-outline-primary" onclick="delet_task()">complte</button>'
+
+
+            task.value = ' '
+            discription.value = ' '
+        
+    
+            
+        }
+        function delet_task(){
+            var selected_rowid = event.target.parentNode.parentNode.id // selecting ancestor id of clicked button (tr)
+            // document.getElementById('todo_tb').innerHTML(selected_row)
+            var selected_row =document.getElementById(selected_rowid) // 
+            selected_row.style.textDecoration ="line-through"
+
+            var children = selected_row.childNodes
+            children[4].innerHTML='comleted'
+            children[4].style.color='green'
+        }
+            }
+            
+    
+        
+    </script>
+</body>
+</html>

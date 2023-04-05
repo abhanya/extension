@@ -1,0 +1,30 @@
+#p1{
+    font-size: large;
+    color: green;
+}
+p{
+    color: brown !important;
+    display: inline;
+}
+b{
+    display: block;
+}
+
+/* img{
+    opacity: .07;
+} */
+
+img:hover{
+    opacity: 0.3;
+}
+
+div{
+    background-color: blueviolet;
+    width: 500px;
+    /* position: absolute;
+    right: 0;
+    bottom: 0; */
+    position: relative;
+    left: 50px;
+    bottom: 50px;
+}

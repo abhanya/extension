@@ -1,0 +1,109 @@
+/* .div1{
+    background-color:blue;
+    border: 5px red solid ;
+    height: 100vh;
+    display: grid; */
+    /* grid-template-columns: 200px 100px 300px 200px 100px 250px; */
+    /* grid-template-columns: auto auto 200px auto; */
+    /* grid-template-columns: 1fr 2fr 3fr; */
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    /* grid-template-columns: repeat(3,1fr); */
+    /* grid-template-rows: repeat(3,2fr); */
+    /* grid-template-rows: 100px 200px; */
+    /* grid-template-columns: auto auto auto; */
+    /* justify-content: center; */
+    /* justify-content: start; */
+    /* justify-content: end; */
+    /* justify-content: space-around; */
+    /* justify-content:space-between; */
+    /* justify-content: space-evenly; */
+    /* align-content: center; */
+    /* align-content: start; */
+    /* align-content: space-around; */
+    /* align-content: space-between; */
+    /* align-content: end; */
+    /* align-content: space-evenly; */
+/* }
+
+.div1 div{
+background-color: aliceblue;
+border: 2px black solid;
+} */
+
+/* .div2{ */
+    /* grid-column: 1/4; */
+    /* grid-column-start: 1;
+    grid-column-end:span 3;
+    grid-row-start: 1;
+    grid-row-end: 3; */
+    /* grid-row: 1/3; */
+    /* grid-area: 2/3/3/1; */
+
+/* }
+
+.div1{
+    grid-template-columns: 600px 200px;
+    grid-template-rows: auto auto auto;
+    grid-column: 3/4;
+}
+
+.div2{
+    /* grid-area: 1/3/1/4; */
+    /* grid-column-end: span 2;
+}
+
+.div3{
+    grid-column-start: 3;
+} */
+
+/* .div5{
+    grid-row: span 2;
+} 
+
+.div6{
+    grid-row-end: span 2;
+}
+
+.div9{
+    grid-column: span 2;
+
+}
+
+.div11{
+    grid-column-start: 2;
+    grid-column-end: 4; */ 
+/* } */
+
+.div1{
+    background-color: azure;
+    border: 4px red solid;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(5,1fr);
+}
+
+img{
+    height: 200px;
+    width: 100%;
+}
+.div2{
+    grid-column: span 2;
+    border: 2px black solid;
+}
+.div5{
+    grid-row: span 2;
+    border: 2px black solid;
+}
+.div6{
+    grid-row: span 2;
+    border: 2px black solid;
+}
+.div8{
+    grid-column: span 2;
+    border: 2px black solid;
+}
+.im{
+    height: 500px;
+}
+

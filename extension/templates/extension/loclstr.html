@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body>
+    
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Product name</label>
+        <input type="text" class="form-control w-25" id="pname">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Product description</label>
+        <textarea class="form-control w-25" id="pdescription" rows="3"></textarea>
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">product Price</label>
+        <input type="text" class="form-control w-25" id="pprice">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">quality</label>
+        <input type="text" class="form-control w-25" id="pquality">
+    </div>
+    <button type="button" class="btn btn-primary btn-lg" onclick="addproduct()">Add product</button>
+        <button type="button" class="btn btn-primary btn-lg" onclick="viewproduct()">view product</button><br><BR>
+    
+
+        <table class="table table-striped-columns w-50" id="pro_table">
+            <tr>
+                <th>so/no</th>
+                <th>product name</th>
+                <th>product description</th>
+                <th>product Price</th>
+                <th>product quality</th>
+                <th>action</th>
+            </tr>
+        </table>
+</body>
+<script>
+    rowno = 0
+    sno = 1
+    function addproduct(){
+        var proname = document.getElementById('pname')
+        var prodescription = document.getElementById('pdescription')
+        var proprice = document.getElementById('pprice')
+        var proquality = document.getElementById('pquality')
+
+        var pro_tb = document.getElementById('pro_table')
+        var new_tr = document.createElement('tr')
+        rowno++
+        var row_id = 'row' + rowno
+        new_tr.setAttribute('id',row_id)
+
+        var td_no = new_tr.appendChild(document.createElement('td'))
+        var td_proname = new_tr.appendChild(document.createElement('td'))
+        var td_prodes = new_tr.appendChild(document.createElement('id'))
+        var td_proprice = new_tr.appendChild(document.createElement('td'))
+        var td_action = new_tr.appendChild(document.createElement('td'))
+        var td_proqality = new_tr.appendChild(document.createElement('td'))
+
+        td_no.innerHTML = sno++
+        pro_tb.appendChild(new_tr)
+        
+        td_proname.innerHTML = proname.value
+        td_prodes.innerHTML = prodescription.value
+        td_proprice.innerHTML = proprice.value
+        td_proqality.innerHTML = proquality.value
+
+
+        product = proname
+        description = prodescription
+        price = proprice
+        quality = proquality
+
+
+        pro = []
+        pro.push(product,description,price,quality)
+        // console.log(pro)
+
+        localStorage.setItem('product',JSON.stringify(pro))
+
+
+    }
+
+    function viewproduct(){
+
+        localStorage.getItem(pro)
+
+    }
+</script>
+</html>

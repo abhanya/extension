@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/cakes.css' %}"> 
+</head>
+<body class="body">
+    <div class="main1">
+        <div class="head">
+            <a href="{% url 'contact' %}"><button>contact us</button></a>
+            <a href="{% url 'about' %}"><button>about us</button></a> 
+        </div>
+        <div class="main2">
+            <p>hello@cakesbake.com</p> <p>ph:9656013462</p>
+        </div>
+                <div class="catog">
+                    <a href="{% url 'home' %}"><button>Special offers</button></a> 
+                    <a href="{% url 'grad' %}"><button>Graduation cakes</button></a>
+                    <a href="{% url 'dsrt' %}"><button>Deserts</button></a>
+                    <a href="{% url 'sna' %}"><button>Snacks</button></a>
+                    <!-- <select>cakes<option> signature cakes</a></option><option>eggless cakes</option></select>
+                    <select>custom cakes<option>birthday cakes</option><option>anniversary cakes</option><option>photo cakes</option></select>
+                    <select>deserts<option>slice</option><option>muffins</option><option>cupcakes</option></select> 
+                    <select>snacks<option>sandwich</option><option>burger</option><option>pizzas</option></select>  -->
+                </div>
+                    <!-- <img src="{% static 'images/search.png' %}" class="sim"> -->
+                
+            <div class="mainbody">
+            <h1>MODERN CAKE BAKES<br>
+                CELEBRATE <br>
+                WITH YOUR LOVED ONES
+            </h1>
+    </div>
+</div>
+</body>
+</html>

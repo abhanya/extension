@@ -1,0 +1,11 @@
+.img1 img
+{
+    width: 50px;
+    
+}
+
+tr[class="tab"]
+{
+    background-color: rgb(4, 134, 185);
+    width: 500%;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Add your option : <input type="text" id="txt1"><br><br>
+    <button id="btn" onclick="add()">Add</button>
+    <ul id="list">
+    
+
+    </ul>
+    <script>
+        function add(){
+            item=document.getElementById('txt1').value
+            ul=document.getElementById('list')
+            li=document.createElement('li')
+            li.appendChild(document.createTextNode(item))
+            ul.appendChild(li)       
+        } 
+    </script> -->
+
+
+        <!-- <label for="text">password</label>
+        <input type="password" id="pass">
+        show<input type="checkbox" id="ch" onclick="chck()">
+        <script>
+            function chck(){
+                var pass1=document.getElementById('pass')
+                if(pass1.type=='password'){
+                pass1.type ='text'
+            }
+            else{
+                pass1.type='password'
+            }
+        }
+        </script> -->
+
+
+<input type="password" id="p1">
+<input type="button" value="submit" onclick="strength()">
+
+<span id="msg"></span>
+<script>
+    function strength(){
+        var pass=document.getElementById('p1').value
+        var msg=document.getElementById('msg')
+        var special_characters = ['@','#','$','%']
+        var sp_found = 0
+        var numb_found = 0
+
+        for(var s of special_characters){
+            if(pass.indexOf(s)>0){
+                sp_found=1
+                break;
+            }
+
+        }
+        for(var i=0; i<10; i++){
+            if(pass.indexOf(s)>0){
+            numb_found=1
+            break
+            }
+        }
+        if(sp_found==1 && numb_found ==1){
+            msg.innerHTML = 'strong password '
+        }
+        else{
+            msg.innerHTML = 'weak password'
+        }
+    }
+</script>
+       
+        
+</body>
+</html>

@@ -1,0 +1,27 @@
+
+       
+        /* #head{
+            color:yellow;
+            font-style: italic;
+        }
+        .p1{
+            color: red;
+            font-style:italic;
+        }
+        span{
+            color: green;
+            font-style: oblique;
+        }  */
+
+ *{
+    color: blueviolet;
+ }
+
+ div span{
+    color: brown;
+ }
+
+ .div1 p{
+    color: blue;
+    font-family: 'Times New Roman', Times, serif;
+ }
